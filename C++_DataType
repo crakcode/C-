@@ -1,0 +1,31 @@
+#include<iostream>
+using namespace std;
+
+int main() {
+	int x = 10; //int는 정수형으로 1,2,3 같은 정수 변수를 선언할떄 이용한다.
+
+	int pi1 = 3.141592;// 3.14라는 실수를 int형으로 저장한다. 
+	cout << pi1 << endl; //int 선언은 정수 선언이기에 3만 출력된다.
+
+	double pi2 = 3.141592;//double은 실수를 담는 선언이다.
+	cout << pi2 << endl; // 실수로 선언해주었기때문에 실수인 3.141592다 출력된다.
+
+
+	const double pi = 3.14158; //const를 사용하게 되면 상수가 되어서 바꿀수 없다.
+	double temp = 0;
+	temp = pi;
+	cout << temp << endl;
+
+
+	char c1; //char은 문자 하나를 담는 것을 선언한다 
+	c1 = 'A'; //문자 하나를 담을수있다.
+	cout << c1 << endl;
+
+	char c2 = 65; //아스키 코드로 동작하기에 해당 문자의 아스키 코드를 넣어서 출력도 가능하다.
+	cout << c2<<endl;
+
+
+	system("pause");
+	return 0;
+
+}
