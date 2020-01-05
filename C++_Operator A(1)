@@ -1,0 +1,86 @@
+/*
+계산기 만들기
+1. 사칙연산 할수있는 계산기 
+2. 벡터이용한다 원하는 수를 먼저 지정 
+3. 그 수만큼 연산할 숫자를 대입 할수있는것을 만들기 
+*/
+
+#include<iostream>
+#include<vector>
+using namespace std;
+int div(vector<int>& v) {
+	int result = 1;
+	for (int i = 0; i < v.size(); i++) {
+		result /= v[i];
+	}
+	return result;
+
+}
+
+int mult(vector<int>& v) {
+	int result = 1;
+	for (int i = 0; i < v.size(); i++) {
+		result *= v[i];
+	}
+	return result;
+
+}
+
+int sum(vector<int>& v) {
+	int result=0;
+	for (int i = 0; i < v.size(); i++) {
+		result += v[i];
+	}
+	return result;
+}
+
+int getData() {
+	int x;
+	cout << "1. sum" << endl;
+	cout << "2.	mult" << endl;
+	cout << "3. divide" << endl;
+	cout << "4. exit" << endl;
+
+	cin >> x;
+	return x;
+
+}
+
+int main() {
+	int num, x;
+	cout << "Enter the number that you want operate: ";
+	cin >> num;
+	
+
+	vector<int>vec(num);
+	int input = 0;
+
+	for (int i = 0; i < num; i++) {
+		cout << i+1<< "-vector:";
+		cin >> input;
+		vec.push_back(input);
+	}
+	while (1) {
+		cout << "chose operator which you want to operate:"<<endl;
+		x = getData();
+
+		if (x == 1) {
+			cout<<sum(vec);
+		}
+		else if (x == 2) {
+			cout << mult(vec);
+
+		}
+		else if (x == 3) {
+			cout << div(vec);
+
+		}
+		else if (x == 4) {
+			exit(404);
+		}
+	}
+
+
+	system("pause");
+
+}
