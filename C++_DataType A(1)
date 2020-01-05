@@ -1,0 +1,30 @@
+/* 
+문제: 알파벳을 입력했을떄 대 소문자를 구별해서 알려주는 함수를 만들어라 
+(힌트: 아스키코드)
+*/
+
+#include<iostream>
+using namespace std;
+
+int evaluate(char c) {
+	if (c > 64 and c <91) {
+		cout << "upper case" << endl;
+	}
+	else if (c > 96 and c < 123) {
+		cout << "lower case" << endl;
+		
+	}
+	else {
+		cout << "please consider the Alpabet"<<endl;
+	
+	}
+}
+
+int main() {
+	char a;
+	cout << "Enter the Alpabet: ";
+	cin >> a;
+	evaluate(a);
+
+	system("pause");
+}
