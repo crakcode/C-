@@ -1,0 +1,32 @@
+#include<iostream> 
+using namespace std;	 
+
+int main() {
+	int a;
+
+	while (1) {
+		cout << "number : ";
+		cin >> a;
+
+		if (a <= 0)
+		{
+			cout << "잘못된 숫자입니다" << endl;
+		}
+		else {
+			if ((a % 2) == 1) {
+				cout << a << "은 홀수입니다." << endl;
+				continue;
+			}
+			else {
+				cout << a << "은 짝수입니다." << endl;
+				continue;
+
+			}
+		}
+
+	
+	}
+	
+	system("pause");
+	return 0;
+}
