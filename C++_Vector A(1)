@@ -1,0 +1,37 @@
+#include<iostream>
+
+using namespace std;
+
+//1. judge the number wheather prime number or not
+
+bool isPrime(int n) {
+	if (n < 2) { return false; }
+	
+	for (int i = 2; i < n; i++) {
+		if (n%i == 0) { return false; }
+	}
+	return true;
+	
+}
+
+int main() {
+
+	while (1) {
+		int num,press;
+		
+		
+		cout << "Enther the number:";
+		cin >> num;
+		if (isPrime(num)) { cout << "this number is prime number!" << endl; }
+		else { cout << "this number is not prime number!" << endl; }
+		
+		cout << "Do u want exit? if u want, Plese Enter the 1" << endl;
+		cin >> press;
+
+		if (press == 1) { exit(404); }
+		else { continue; }
+
+	}
+
+
+}
