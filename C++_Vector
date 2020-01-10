@@ -1,0 +1,44 @@
+#include <vector>
+int main() {
+
+
+//0. basic vector form
+
+	vector<char>vec1{ 'a','b','c' };
+	vector<int>vec2{1, 2, 3};
+
+//1. typical method for showing the element
+	for (int i = 0; i < vec1.size(); i++) {
+		cout << vec1[i]<<",";
+	}cout << endl;
+
+
+//2. method using simplfid for statment for showing the element 
+	for (auto elem : vec2) {
+		cout << elem<<",";
+	}cout << endl;
+
+
+//3. making sum and average using vector
+
+	double sum = 0.0;
+	int num_en;
+	cout << "Plese enter number of entity! ";
+	cin >> num_en;
+	vector<int>vec(num_en);
+
+	for (int i = 0; i < vec.size(); i++) {
+		int temp;
+		cout <<i+1<< ". Enter the number ";
+		cin >> temp;
+		vec[i] = temp;
+		sum += temp;
+	}
+	
+	cout <<"Average:" << sum / vec.size() << endl;
+
+	system("pause");
+	return 0;
+}
+
+*/
