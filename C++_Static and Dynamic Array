@@ -1,0 +1,35 @@
+#include<iostream>
+
+using namespace std;
+
+int main() {
+	//1. static array 
+	// can't change the element. the size of array was fixed.
+	int S_ary[5] = { 1,2,3,4,5 };
+
+
+
+	//2. dynamic array 
+	
+	int length;
+	cout << "Enter the size you want to make";
+	cin >> length;
+	int* D_ary = new int[length];
+
+	//initialzation and print the element
+	int* Begin = D_ary;
+	int* End = D_ary+length;
+
+	for (int* curr = Begin; curr != End; curr++) {
+		cout << "Enter the element : ";
+		cin>>*(curr);
+	}
+	
+
+	for (int* curr = Begin; curr != End; curr++) {
+		cout << *(curr)<<"\t";
+	}cout << endl;
+
+
+	system("pause");
+}
