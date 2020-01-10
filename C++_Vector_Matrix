@@ -1,0 +1,17 @@
+int main() {
+
+	vector<vector<int>>vec{ {1,2,3},{4,5,6} };
+
+	for (vector<int>& row : vec) { //각각의 element를 row로 저장한다.
+		for (int& elem : row) {
+			cin >> elem;
+		}
+	}
+
+	for (int row = 0; row < vec.size(); row++) {
+		for (int col = 0; col < vec[row].size(); col++) {
+			cout << vec[row][col] << '\t';
+		}
+		cout << endl;
+	}
+}
