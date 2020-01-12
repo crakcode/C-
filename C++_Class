@@ -1,0 +1,57 @@
+#include<iostream>
+#include<string>
+
+using namespace std;
+
+class Account {
+//making class 
+
+private:
+	string name;
+	string id;
+	double balance;
+public:
+	Account() :name("XXX"), id("0000"), balance(0) {};
+	//initialzation constructor
+	Account(string _name, string _id, int _balance)
+	{
+		name = _name;
+		id = _id;
+		balance = _balance;
+	}
+
+	void deposit(double _amt) {
+		balance += _amt;
+
+	}
+
+	void withdraw(double _amt) {
+		if (balance -_amt < 0) {
+			cout << "출굼x" << endl;
+		}
+		balance -= _amt;
+	}
+	void print() {
+		cout << name << '\t' << id << '\t' << balance << endl;
+	}
+
+};
+
+int main() {
+
+
+	Account at1;
+	at1.print();
+
+	Account at2("crakcode","0001",20000);
+	at2.print();
+
+	at2.deposit(10000);
+	at2.print();
+
+
+	at2.withdraw(10000);
+	at2.print();
+
+	system("pause");
+}
