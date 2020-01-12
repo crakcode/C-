@@ -1,0 +1,66 @@
+#include<iostream>
+#include<string>
+
+using namespace std;
+
+
+class Point {
+private:
+	int x; int y;
+public:
+	Point() :x(0), y(0) {};
+	Point(int _x, int _y) :x(_x), y(_y) {};
+
+	void SetXY(int _x, int _y) { x = _x; y = _y; }
+	//method for using set X,Y
+	
+
+	int getX() const { return x; }
+	int getY() const { return y; }
+	// method for return to main method 
+
+	//operator method
+	Point operator+(Point pt) {
+		Point result(this->x + pt.getX(), this->y + pt.getY());
+		return result;
+	}
+	Point operator-(Point pt) {
+		Point result(this->x - pt.getX(), this->y - pt.getY());
+		return result;
+	}
+};
+
+int main() {
+	Point pt1(2,4);
+	Point pt2(1,2);
+	Point pt3;
+
+	pt3 = pt1 + pt2;
+
+
+	//meaning of ->
+	Point* pPt = &pt1;
+	
+
+	// the letter and the former is same
+	cout << (*pPt).getX() << " , " << (*pPt).getY() << endl;
+	cout << pPt->getX() << " , " << pPt->getY() << endl;
+
+
+	// making class array 
+	Point* list = new Point[5];
+	for (int i = 0; i < 5; i++) {
+		list[i].SetXY(rand() % 11, rand() % 11);
+		cout << list[i].getX() << "," << list[i].getY() << endl;
+	}
+
+
+		
+	cout << pt1.getX() << '\t'<<pt1.getY()<< endl;
+	cout << pt2.getX() << '\t' << pt2.getY() << endl;
+	cout << pt3.getX() << '\t' << pt3.getY() << endl;
+
+	system("pause");
+
+}
+
